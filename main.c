@@ -12,7 +12,7 @@
 #include <unistd.h>
 
 #define SERVER_PORT 81
-#define AGENT_TYPE "linux-agent:"VERSION
+#define AGENT_TYPE "linux-agent:" VERSION
 
 int main(int argc, char const *argv[]) {
   signal(SIGPIPE, SIG_IGN);
