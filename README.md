@@ -1,2 +1,4 @@
-# agent-linux
-sets linux machine as an agent 
+# cear
+
+Motivation:
+Listen to incomming TCP connections on a port and execute scripts on server when TCP connections is accepted.
