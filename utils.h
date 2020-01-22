@@ -18,7 +18,7 @@ void httpResp(char **resp, char *content) {
          contentLen, "\n\n", content);
 }
 
-void startHttpSrv(struct sockaddr_in *srvAddr, int *srvFd, unsigned int port) {
+void startTCPSrv(struct sockaddr_in *srvAddr, int *srvFd, unsigned int port) {
   if ((*srvFd = socket(AF_INET, SOCK_STREAM, 0)) == 0) {
     perror("server socket");
     exit(EXIT_FAILURE);
