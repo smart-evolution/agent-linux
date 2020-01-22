@@ -41,7 +41,10 @@ void *tcpLoop(void *pthread_args) {
   }
 }
 
-void *tcpLoop(void *pthread_args) {}
+void *httpLoop(void *pthread_args) {
+  while (1) {
+  }
+}
 
 int main(int argc, char const *argv[]) {
   signal(SIGPIPE, SIG_IGN);
@@ -62,6 +65,7 @@ int main(int argc, char const *argv[]) {
   params.serverAddress = serverAddress;
 
   pthread_create(&tid, NULL, tcpLoop, (void *)&params);
+  pthread_create(&tid, NULL, httpLoop, (void *)&params);
   pthread_exit(NULL);
 
   return 0;
