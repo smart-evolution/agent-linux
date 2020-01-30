@@ -59,7 +59,7 @@ void *httpLoop(void *pthread_args) {
     }
 
     char *content;
-    concat(&content, 3, "# Container configuration\n\
+    concat(&content, 3, "# Configuration\n\
 hardware_id=[",
            HARDWARE_ID, "]\n");
 
@@ -76,7 +76,7 @@ hardware_id=[",
 int main(int argc, char const *argv[]) {
   signal(SIGPIPE, SIG_IGN);
 
-  printf("starting linux-agent %s\n", VERSION);
+  printf("starting linux agent %s\n", VERSION);
 
   int i = 0;
   int n;

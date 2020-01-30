@@ -1,3 +1,6 @@
+#include "strings.h"
+#include <stdlib.h>
+#include <string.h>
 
 void httpResp(char **resp, char *content) {
   char *contentLen = malloc(6);

@@ -1,4 +1,3 @@
-#include "strings.h"
 #include <arpa/inet.h>
 #include <stdarg.h>
 #include <stdio.h>
