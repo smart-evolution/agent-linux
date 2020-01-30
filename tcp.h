@@ -7,17 +7,6 @@
 
 #define MAX_CLIENTS 30
 
-void httpResp(char **resp, char *content) {
-  char *contentLen = malloc(6);
-  sprintf(contentLen, "%lu", strlen(content));
-
-  concat(resp, 4,
-         "HTTP/1.1 200 OK\n"
-         "Content-Type: text/html\n"
-         "Content-Length: ",
-         contentLen, "\n\n", content);
-}
-
 void startTCPSrv(struct sockaddr_in *srvAddr, int *srvFd, unsigned int port) {
   if ((*srvFd = socket(AF_INET, SOCK_STREAM, 0)) == 0) {
     perror("server socket");
